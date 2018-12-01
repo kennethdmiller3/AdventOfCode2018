@@ -1,0 +1,2 @@
+Part 1: final frequency 437
+Part 2: repeated frequency 655 on iteration 142991
