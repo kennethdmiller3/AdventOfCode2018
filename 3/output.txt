@@ -1,0 +1,2 @@
+Part 1: 98005 square inches conflict
+Part 2: claim 331 has no conflict
