@@ -1,0 +1,5 @@
+Part 1: guard with most minutes asleep is 2753 (502 minutes)
+	most commonly asleep at minute 28 (14 times)
+	id * minute = 77084
+Part 2: guard most commonly asleep is 1213 (16 times at minute 19)
+	id * minute = 23047
