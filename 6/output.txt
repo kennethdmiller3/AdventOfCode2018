@@ -1,0 +1,2 @@
+Part 1: coordinate 120, 234 has largest finite area 4398
+Part 2: 39560 locations have a total distance less than 10000
