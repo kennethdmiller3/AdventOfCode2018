@@ -1,0 +1,2 @@
+Part 1: sum of metadata entries is 38722
+Part 2: value of the root node is 13935
