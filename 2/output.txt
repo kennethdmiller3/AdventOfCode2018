@@ -1,6 +1,0 @@
-Part 1: checksum 8610
-Part 2: identifiers
-	iosnxmfkpabcjpdywvrtaqhluy
-	iosnxmfkpabcjpdywvrtawhluy
-differ at position 21
-common letters iosnxmfkpabcjpdywvrtahluy
