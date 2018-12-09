@@ -1,0 +1,2 @@
+Part 1: player 104 wins with 384475 points
+Part 2: player 405 wins with 3187566597 points
