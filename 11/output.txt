@@ -1,0 +1,2 @@
+Largest total power 31 at (235, 14)
+Largest total power 108 at (237, 227) size 14
