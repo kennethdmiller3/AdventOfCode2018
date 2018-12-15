@@ -1,0 +1,10 @@
+Part 1: crash at 118, 66 on tick 104
+Part 2: crash at 118, 66 on tick 104
+Part 2: crash at 38, 7 on tick 592
+Part 2: crash at 11, 71 on tick 610
+Part 2: crash at 136, 34 on tick 632
+Part 2: crash at 130, 84 on tick 887
+Part 2: crash at 107, 80 on tick 1014
+Part 2: crash at 82, 90 on tick 2693
+Part 2: crash at 63, 33 on tick 12630
+Part 2: last cart at 70, 129
