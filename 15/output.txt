@@ -1,0 +1,26 @@
+Part 1:
+..............................................................................................
+Combat ends after 93 full rounds
+G win with 2570 total hit points left
+Outcome: 93 * 2570 = 239010
+
+Part 2:
+Strength=3 ........................DEFEAT!
+Strength=4 ........................DEFEAT!
+Strength=5 ........................DEFEAT!
+Strength=6 ........................DEFEAT!
+Strength=7 ........................DEFEAT!
+Strength=8 ........................DEFEAT!
+Strength=9 ........................DEFEAT!
+Strength=10 .........................DEFEAT!
+Strength=11 .........................DEFEAT!
+Strength=12 ...........................DEFEAT!
+Strength=13 ............................DEFEAT!
+Strength=14 .............................DEFEAT!
+Strength=15 .....................................................DEFEAT!
+Strength=16 ...............................................VICTORY!
+
+Combat ends after 46 full rounds
+E win with 1358 total hit points left
+Outcome: 46 * 1358 = 62468
+
