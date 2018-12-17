@@ -1,0 +1,18 @@
+Part 1: 493 samples behave like 3+ opcodes
+opcode 1 = index 3
+opcode 2 = index 7
+opcode 4 = index 1
+opcode 8 = index 6
+opcode 10 = index 5
+opcode 13 = index 2
+opcode 14 = index 9
+index 15 = opcode 5
+opcode 0 = index 4
+opcode 3 = index 8
+opcode 9 = index 14
+opcode 11 = index 0
+index 11 = opcode 6
+index 13 = opcode 12
+opcode 7 = index 10
+opcode 15 = index 12
+Part 2: register 0 contains 445
