@@ -430,14 +430,14 @@ void Part2(std::string const &initial, uint8_t width, uint8_t height)
 	std::vector<Unit> unit_by_id;
 
 	std::string layout;
-	uint8_t elf_strength;
 	uint32_t rounds;
 	Team winner;
 
 	std::cout << "Part 2:\n";
 
 	// find the lowest elf strength that leads to victory with no elf casualties
-	for (elf_strength = 3; elf_strength < UINT8_MAX; ++elf_strength)
+	uint8_t elf_strengths[] = { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 23, 25, 29, 34, 40, 50, 67, 100, 200 };
+	for (uint8_t elf_strength : elf_strengths)
 	{
 		// simulate the battle
 		std::cout << "Strength=" << int(elf_strength) << " ";

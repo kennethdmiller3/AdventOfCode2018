@@ -5,7 +5,6 @@ G win with 2570 total hit points left
 Outcome: 93 * 2570 = 239010
 
 Part 2:
-Strength=3 ........................DEFEAT!
 Strength=4 ........................DEFEAT!
 Strength=5 ........................DEFEAT!
 Strength=6 ........................DEFEAT!
