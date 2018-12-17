@@ -89,15 +89,21 @@ Team Simulate(uint32_t &rounds, std::vector<Unit> &unit_by_id, std::string &layo
 	open_set.reserve(width * height);
 
 	// predicate for comparing two locations in the A* open set
-	auto OpenSetPredicate = [&goal_at_pos, &f_at_pos](uint16_t a, uint16_t b) -> bool
+	auto OpenSetPredicate = [&goal_at_pos, &g_at_pos, &f_at_pos](uint16_t a, uint16_t b) -> bool
 	{
 		if (f_at_pos[a] > f_at_pos[b])
 			return true;
 		if (f_at_pos[a] < f_at_pos[b])
 			return false;
+		if (g_at_pos[a] > g_at_pos[b])
+			return true;
+		if (g_at_pos[a] < g_at_pos[b])
+			return false;
 		if (goal_at_pos[a] > goal_at_pos[b])
 			return true;
-		return false;
+		if (goal_at_pos[a] < goal_at_pos[b])
+			return false;
+		return a > b;
 	};
 
 	// unit initiative order list
