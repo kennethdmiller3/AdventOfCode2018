@@ -1,0 +1,2 @@
+Part 1: water count 38409
+Part 2: rest count 32288
