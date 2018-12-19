@@ -1,0 +1,4 @@
+Part 1: 740 trees * 533 yards = 394420
+Part 2: step 547 repeats step 519 (period 28)
+Part 2: step 1000000000 equivalent to step 524
+Part 2: 570 trees * 306 yards = 174420
