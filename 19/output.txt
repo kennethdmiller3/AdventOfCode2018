@@ -1,0 +1,6 @@
+Part 1:
+Registers: [1392, 1, 927, 257, 926, 927]
+Register 0 contains 1392
+Part 2:
+Registers: [15826992, 0, 10551327, 257, 10551326, 10551327]
+Register 0 contains 15826992
