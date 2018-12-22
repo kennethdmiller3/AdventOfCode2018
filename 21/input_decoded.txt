@@ -1,0 +1,101 @@
+#ip 3				; r3 is ip
+seti 123 0 4		; 0:	r4 = 123
+bani 4 456 4		; 1:	r4 = r4 & 456
+eqri 4 72 4			; 2:	r4 = r4 == 72
+addr 4 3 3			; 3:	ip = r4 + ip		; if ((123 & 456) == 72 goto 5 <-- always true
+seti 0 0 3			; 4:	ip = 0				; goto 1
+seti 0 9 4			; 5:	r4 = 0
+bori 4 65536 2		; 6:	r2 = r4 | 65536
+seti 6152285 4 4	; 7:	r4 = 6152285
+bani 2 255 1		; 8:	r1 = r2 & 255
+addr 4 1 4			; 9:	r4 = r4 + r1
+bani 4 16777215 4	; 10:	r4 = r4 & 16777215
+muli 4 65899 4		; 11:	r4 = r4 * 65899
+bani 4 16777215 4	; 12:	r4 = r4 & 16777215
+gtir 256 2 1		; 13:	r1 = 256 > r2
+addr 1 3 3			; 14:	ip = r1 + ip		; if (256 > r2) goto 16
+addi 3 1 3			; 15:	ip = ip + 1			; goto 17
+seti 27 4 3			; 16:	ip = 27				; goto 28
+seti 0 3 1			; 17:	r1 = 0
+addi 1 1 5			; 18:	r5 = r1 + 1
+muli 5 256 5		; 19:	r5 = r5 * 256
+gtrr 5 2 5			; 20:	r5 = r5 > r2
+addr 5 3 3			; 21:	ip = r5 + ip		; if (r5 > r2) goto 23
+addi 3 1 3			; 22:	ip = ip + 1			; goto 24
+seti 25 9 3			; 23:	ip = 25				; goto 26
+addi 1 1 1			; 24:	r1 = r1 + 1
+seti 17 4 3			; 25:	ip = 17				; goto 18
+setr 1 9 2			; 26:	r2 = r1
+seti 7 4 3			; 27:	ip = 7				; goto 8
+eqrr 4 0 1			; 28:	r1 = r4 == r0
+addr 1 3 3			; 29:	ip = r1 + ip		; if (r4 == r0) goto 31 [exit]
+seti 5 6 3			; 30:	ip = 5				; goto 6
+
+// skip the always-true (123 & 456) == 72 test
+5: r4 = 0;
+outer_loop:
+6: r2 = r4 | 65536;
+7: r4 = 6152285;
+middle_loop:
+8: r1 = r2 & 255;
+9: r4 += r1;
+10: r4 &= 16777215;
+11: r4 *= 65899;
+12: r4 &= 16777215;
+13-16: if (256 > r2) goto 28 [check_done];
+17: r1 = 0;
+inner_loop:
+18: r5 = r1 + 1;
+19: r5 *= 256;
+20-23: if (r5 > r2) goto 26;
+24: r1 += 1
+25: goto 18 [inner_loop]
+26: r2 = r1
+27: goto 8 [middle_loop]
+check_done:
+28-30: if (r4 == r0) goto 31 [done]; else goto 6 [outer_loop];
+done:
+31: return
+
+Part 1: set r0 to the value r4 has the first time it gets to ip 28
+
+r4 = 0
+
+for (;;) // outer loop
+{
+	r2 = r4 | 65536;
+	r4 = 6152285;		//=0x5DE05D
+
+	for (;;) // middle loop
+	{
+		r1 = r2 & 255;
+		r4 += r1;
+		r4 &= 16777215; //=0xFFFFFF
+		r4 *= 65899;	//=0x1016B
+		r4 &= 16777215; //=0xFFFFFF
+
+		if (r2 >= 256)
+		{
+#if 1
+			r2 /= 256;
+#else
+			r1 = 0;
+			for (;;) // inner loop
+			{
+				r5 = r1 + 1;
+				r5 *= 256;
+				if (r5 > r2)
+					break;
+				r1 += 1;
+			}
+			r2 = r1;
+#endif
+		}
+		else
+		{
+			if (r4 == r0)
+				goto done;
+			break;
+		}
+	}
+}

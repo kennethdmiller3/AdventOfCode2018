@@ -1,0 +1,2 @@
+Part 1: first value compared is 11840402
+Part 2: last value before repeat is 6577657
