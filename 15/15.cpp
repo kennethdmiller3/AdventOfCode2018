@@ -95,10 +95,6 @@ Team Simulate(uint32_t &rounds, std::vector<Unit> &unit_by_id, std::string &layo
 			return true;
 		if (f_at_pos[a] < f_at_pos[b])
 			return false;
-		if (g_at_pos[a] > g_at_pos[b])
-			return true;
-		if (g_at_pos[a] < g_at_pos[b])
-			return false;
 		if (goal_at_pos[a] > goal_at_pos[b])
 			return true;
 		if (goal_at_pos[a] < goal_at_pos[b])
@@ -265,7 +261,12 @@ Team Simulate(uint32_t &rounds, std::vector<Unit> &unit_by_id, std::string &layo
 							g_at_pos[neighbor_pos] = g;
 							f_at_pos[neighbor_pos] = g + ManhattanDistance(unit.pos, neighbor_pos, width);
 
-							if (!open_at_pos[neighbor_pos])
+							if (open_at_pos[neighbor_pos])
+							{
+								// refresh the open queue because the order may have changed
+								std::make_heap(open_set.begin(), open_set.end(), OpenSetPredicate);
+							}
+							else
 							{
 								// discovered a new node
 								open_at_pos[neighbor_pos] = true;
