@@ -1,0 +1,3 @@
+Part 1: total risk is 11843
+Path planning took 162004 iterations
+Part 2: best time to the goal is 1078
