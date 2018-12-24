@@ -1,0 +1,4 @@
+Part 1: nanobot #91 pos=<41098590,30650671,12816899> r=99356030
+Part 1: 933 nanobots in range
+Part 2: point at <24680964,26532603,19674273> overlaps 977
+Part 2: Manhattan distance from <0,0,0> is 70887840
