@@ -5,7 +5,7 @@
 
 // https://adventofcode.com/2018/day/2
 
-// read a list of frequency changes from the specified input stream
+// read a list of identifiers from the specified input stream
 void ReadIdentifiers(std::vector<std::string> &output, std::istream &input)
 {
 	std::string id;

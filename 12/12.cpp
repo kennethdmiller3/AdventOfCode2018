@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+// https://adventofcode.com/2018/day/12
+
 struct State
 {
 	std::vector<bool> occupied;

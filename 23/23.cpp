@@ -2,6 +2,8 @@
 #include <vector>
 #include <algorithm>
 
+// https://adventofcode.com/2018/day/23
+
 // 3D point
 struct Point
 {

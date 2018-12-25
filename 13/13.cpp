@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <assert.h>
 
+https://adventofcode.com/2018/day/13
+
 // the order that carts update is based on current location in "reading order"
 // first row left to right, second row left to right, etc.
 

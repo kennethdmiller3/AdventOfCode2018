@@ -2,6 +2,8 @@
 #include <vector>
 #include <list>
 
+// https://adventofcode.com/2018/day/9
+
 void Part(int partNumber, int playerCount, int lastMarbleWorth)
 {
 	// track score for each player

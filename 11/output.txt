@@ -1,2 +1,5 @@
-Largest total power 31 at (235, 14)
-Largest total power 108 at (237, 227) size 14
+Largest total power 31 at (235, 14) [0.000332798]
+Largest total power 108 at (237, 227) size 14 [0.0279584]
+summed area table [0.000296958]
+Largest total power 31 at (235, 14) [0.000290634]
+Largest total power 108 at (237, 227) size 14 [0.0255417]

@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <string.h>
 
+// https://adventofcode.com/2018/day/24
+
 #define DEBUG_PRINT 0
 
 // teams

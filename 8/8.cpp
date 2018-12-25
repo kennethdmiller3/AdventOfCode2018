@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+// https://adventofcode.com/2018/day/8
+
 // tree node
 struct Node
 {
